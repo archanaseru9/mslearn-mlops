@@ -3,10 +3,12 @@
 import argparse
 import glob
 import os
+import mlflow
 
 import pandas as pd
 
 from sklearn.linear_model import LogisticRegression
+
 
 
 # define functions
@@ -76,7 +78,7 @@ if __name__ == "__main__":
 
     # run main function
     main(args)
-
+    mlflow.autolog()
     # add space in logs
     print("*" * 60)
     print("\n\n")
